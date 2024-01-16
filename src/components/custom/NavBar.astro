@@ -1,0 +1,65 @@
+---
+import data from "../../data/site.json";
+import DarkModeToggle from "./DarkModeToggle.astro";
+import Container from "./Container.astro";
+import Avatar from "../Avatar.astro";
+---
+<div class="top-0 h-16 pt-6">
+  <Container outerClass="w-full">
+    <div class="relative flex gap-4">
+      <div class="flex flex-1">
+        <Avatar />
+      </div>
+      <div class="flex flex-1 justify-end md:justify-center">
+        <div id="mobileNav" class="md:hidden">
+          <button 
+              class="block group items-center rounded-full bg-white/90 px-4 py-2 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10 dark:hover:ring-white/20" type="button"
+              data-modal-target="navLinks"
+              data-modal-toggle="navLinks"
+            >
+                Menu
+          </button>
+          <div id="navLinks" tabindex="-1" data-modal-placement="center-center" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+            <li>
+              <a class="relative block px-3 py-2 transition hover:text-primary" href="/">Home</a>
+            </li>
+            <li>
+                <a class="relative block px-3 py-2 transition hover:text-primary" href="/notes">Notes</a>
+            </li>
+            <li>
+                <a class="relative block px-3 py-2 transition hover:text-primary" href="/uses">Uses</a>
+            </li>
+            <li>
+                <a class="relative block px-3 py-2 transition hover:text-primary" href="/about">About</a>
+            </li>
+          </div>
+        </div>
+        <div id="deskNav" class="hidden md:block">
+          <nav class="md:block">
+            <ul class="flex rounded-full bg-white/90 px-3 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10">
+                <li>
+                    <a class="relative block px-3 py-2 transition hover:text-primary" href="/">Home</a>
+                </li>
+                <li>
+                    <a class="relative block px-3 py-2 transition hover:text-primary" href="/notes">Notes</a>
+                </li>
+                <li>
+                    <a class="relative block px-3 py-2 transition hover:text-primary" href="/uses">Uses</a>
+                </li>
+                <li>
+                    <a class="relative block px-3 py-2 transition hover:text-primary" href="/about">About</a>
+                </li>
+            </ul>
+          </nav>
+        </div>     
+
+        <div id="navLinks" tabindex="-1" data-modal-placement="center-center" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+          
+        </div>
+      </div>
+      <div class="flex justify-end md:flex-1">
+        <DarkModeToggle />
+      </div>
+    </div>
+  </Container>
+</div>
