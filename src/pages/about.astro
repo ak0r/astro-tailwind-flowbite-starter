@@ -4,6 +4,8 @@ import Container from '../components/custom/Container.astro';
 import PageTitle from '../components/custom/PageTitle.astro';
 import { Image } from 'astro:assets';
 import AvatarImage from '../assets/profile.jpeg';
+import social from "../configs/socialLinks.json"
+import SocialLinks from '../components/custom/SocialLinks.astro';
 ---
 <PageLayout>
 	<Container outerClass="mt-16 sm:mt-32">
@@ -30,9 +32,7 @@ import AvatarImage from '../assets/profile.jpeg';
 					sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
 				</div>
 				<div class="mt-6 flex gap-6">
-					<li class="group flex text-sm font-medium">X</li>
-					<li class="group flex text-sm font-medium">Y</li>
-					<li class="group flex text-sm font-medium">Z</li>
+					<SocialLinks source={social.main} className="social-icons"></SocialLinks>
 				</div>
 			</div>
 		</div>
