@@ -13,7 +13,7 @@ module.exports = {
       secondary: "#247084",
       transparent: "transparent",
       current: "currentColor",
-      slate: colors.zinc,
+      slate: colors.slate,
       stone: colors.stone,
       blue: colors.blue,
       green: colors.green,
